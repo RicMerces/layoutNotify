@@ -29,7 +29,7 @@ class OnboardingScreenPadronization extends StatelessWidget {
                 text,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  fontSize: 26,
+                  fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),

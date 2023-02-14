@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:notify_layout/app/screens/app_initial/loading_screen.dart';
+import 'package:notify_layout/app/screens/onboarding/onboarding.dart';
 
 void main() {
   runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoadingScreen(),
+      home: Onboarding(),
     ),
   );
 }

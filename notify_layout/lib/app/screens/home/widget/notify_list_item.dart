@@ -48,63 +48,73 @@ class NotifyListItem extends StatelessWidget {
                             const Color(0xff3A86FF),
                           ],
               )),
-          height: MediaQuery.of(context).size.height * 0.12,
+          height: MediaQuery.of(context).size.height * 0.13,
           width: 300,
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                emoji,
-                height: 20,
+              // const AssetImage('assets/pics/emoji_descarado.png'),
+              Image.network(
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png',
+              ),
+              const SizedBox(
+                width: 10,
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: TextStyle(
-                      color: homeType == HomeType.ativa
-                          ? const Color(0xff1A69FF)
-                          : Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 03,
-                  ),
-                  Text(
-                    description,
-                    style: TextStyle(
-                      color: homeType == HomeType.ativa
-                          ? const Color(0xff272727)
-                          : Colors.white,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Icon(
-                    Icons.repeat,
-                    color: homeType == HomeType.ativa
-                        ? const Color(0xff1A69FF)
-                        : Colors.white,
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        style: TextStyle(
+                          color: homeType == HomeType.ativa
+                              ? const Color(0xff1A69FF)
+                              : Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 03,
+                      ),
+                      Text(
+                        description,
+                        style: TextStyle(
+                          color: homeType == HomeType.ativa
+                              ? const Color(0xff272727)
+                              : Colors.white,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    ],
                   ),
-                  Text(
-                    '20/01/2022',
-                    style: TextStyle(
-                      color: homeType == HomeType.ativa
-                          ? const Color(0xff1A69FF)
-                          : Colors.white,
-                    ),
-                    // style: text,
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Icon(
+                        Icons.repeat,
+                        size: 15,
+                        color: homeType == HomeType.ativa
+                            ? const Color(0xff1A69FF)
+                            : Colors.white,
+                      ),
+                      Text(
+                        '20/01/2022',
+                        style: TextStyle(
+                          color: homeType == HomeType.ativa
+                              ? const Color(0xff272727)
+                              : Colors.white,
+                        ),
+                        // style: text,
+                      ),
+                    ],
                   ),
                 ],
               ),

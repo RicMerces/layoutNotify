@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notify_layout/app/screens/home/widget/add_button.dart';
+import 'package:notify_layout/app/screens/home/widget/bottom_nofify_bar.dart';
 import 'package:notify_layout/app/screens/home/widget/enum/home_type_enum.dart';
 import 'package:notify_layout/app/screens/home/widget/notify_list_item.dart';
 
@@ -8,6 +10,8 @@ class NotifyActiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        floatingActionButton: const AddButton(),
+        bottomNavigationBar: const BottomNofifyBar(),
         appBar: AppBar(
           title: const Text('Calendario'),
         ),

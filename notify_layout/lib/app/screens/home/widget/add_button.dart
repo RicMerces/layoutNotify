@@ -221,6 +221,111 @@ class AddButton extends StatelessWidget {
                 )),
           ),
         ),
+        const SizedBox(
+          width: 20,
+        ),
+        FloatingActionButton(
+          child: Container(
+            width: 60,
+            height: 60,
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: LinearGradient(
+                colors: [
+                  Colors.yellow,
+                  Colors.orange,
+                ],
+              ),
+            ),
+            child: const Icon(
+              Icons.electric_bolt_outlined,
+              size: 30,
+            ),
+          ),
+          onPressed: () => showDialog(
+            context: context,
+            builder: ((context) => Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SvgPicture.asset('assets/svg/aderiva.svg'),
+                      const Text(
+                        'Nenhuma Noticação avistada',
+                        style: TextStyle(
+                          color: Color(0xff395BFF),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topRight,
+                                  end: Alignment.bottomLeft,
+                                  colors: [
+                                    Color(0xff48F3A1),
+                                    Color(0xff31C87F),
+                                  ],
+                                ),
+                                borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(30),
+                                  bottomLeft: Radius.circular(30),
+                                ),
+                              ),
+                              child: TextButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  "Ressucitar",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                gradient: LinearGradient(
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                  colors: [
+                                    Color(0xffFF4C48),
+                                    Color(0xffFF2E22),
+                                  ],
+                                ),
+                                borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(30),
+                                  bottomRight: Radius.circular(30),
+                                ),
+                              ),
+                              child: TextButton(
+                                onPressed: () {},
+                                child: const Text(
+                                  "Deletar",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                )),
+          ),
+        ),
       ],
     );
   }
